@@ -1,21 +1,30 @@
 import React from "react";
+import { addScaleCorrection } from "framer-motion";
 import styled from "styled-components";
+import { ImageProvider } from "./state";
 import { DocRenderer } from "../../types";
+import Image from "./components/Image";
+import ImageControls from "./components/ImageControls";
 
 const ImageProxyRenderer: DocRenderer = (props) => {
   const {
-    mainState: { currentDocument },
-    children,
+    mainState,
   } = props;
 
-  if (!currentDocument) return null;
+  if (!mainState.currentDocument) return null;
 
   return (
-    <Container id="image-renderer" {...props}>
-      {children || (
-        <Img id="image-img" src={currentDocument.fileData as string} />
-      )}
-    </Container>
+    <ImageProvider mainState={mainState}>
+		<Container id="image-renderer" {...props}>
+			<ImageControls />
+			<Image {...props} />
+			{/* <ImgDiv>
+				{children || (
+					<Img id="image-img" zoomLevel={zoomLevel} src={currentDocument.fileData as string} />
+				)}
+			</ImgDiv> */}
+		</Container>
+    </ImageProvider>
   );
 };
 
@@ -26,15 +35,7 @@ ImageProxyRenderer.weight = 0;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
   background-color: #fff;
-`;
-
-const Img = styled.img`
-  max-width: 95%;
-  max-height: 95%;
 `;
