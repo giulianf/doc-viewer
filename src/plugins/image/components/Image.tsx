@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ImageContext } from "../state";
 import { IImageState } from "../state/reducer";
 
-const Image = (props) => {
+const Image = () => {
   const {
     state: { mainState, zoomLevel },
   } = useContext(ImageContext);

@@ -1,5 +1,4 @@
 import React from "react";
-import { addScaleCorrection } from "framer-motion";
 import styled from "styled-components";
 import { ImageProvider } from "./state";
 import { DocRenderer } from "../../types";
@@ -17,7 +16,7 @@ const ImageProxyRenderer: DocRenderer = (props) => {
     <ImageProvider mainState={mainState}>
 		<Container id="image-renderer" {...props}>
 			<ImageControls />
-			<Image {...props} />
+			<Image />
 			{/* <ImgDiv>
 				{children || (
 					<Img id="image-img" zoomLevel={zoomLevel} src={currentDocument.fileData as string} />
