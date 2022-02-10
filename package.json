@@ -5,14 +5,14 @@
  "author": "Matthew Mogford",
  "license": "ISC",
  "repository": {
-  "url": "https://github.com/Alcumus/react-doc-viewer"
+  "url": "https://github.com/r-uis/doc-viewer"
  },
  "main": "build/index.js",
  "types": "build/index.d.ts",
  "dependencies": {
-  "pdfjs-dist": "2.10.377",
-  "react-pdf": "5.6.0",
-  "styled-components": "^5.3.3",
+	"pdfjs-dist": "2.12.313",
+	"react-pdf": "5.7.1",
+	"styled-components": "^5.3.3",
   "wl-msg-reader": "^0.2.0"
  },
  "devDependencies": {
@@ -44,7 +44,8 @@
   "version:post": "git push origin master && git push origin master --tags",
   "build-release:patch": "react-scripts test --watchAll=false && npm run build && npm run version:patch",
   "build-release:minor": "react-scripts test --watchAll=false && npm run build && npm run version:minor",
-  "build-release:major": "react-scripts test --watchAll=false && npm run build && npm run version:major"
+  "build-release:major": "react-scripts test --watchAll=false && npm run build && npm run version:major",
+  "npm-publish": "npm publish --access=public"
  },
  "eslintConfig": {
   "extends": "react-app"
