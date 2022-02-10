@@ -1,6 +1,6 @@
 {
  "name": "@r-uis/doc-viewer",
- "version": "0.1.6",
+ "version": "0.1.7",
  "description": "Document viewer for react. Renders online/local documents.",
  "author": "Matthew Mogford",
  "license": "ISC",
@@ -10,9 +10,9 @@
  "main": "build/index.js",
  "types": "build/index.d.ts",
  "dependencies": {
-	"pdfjs-dist": "2.12.313",
-	"react-pdf": "5.7.1",
-	"styled-components": "^5.3.3",
+  "pdfjs-dist": "2.12.313",
+  "react-pdf": "5.7.1",
+  "styled-components": "^5.3.3",
   "wl-msg-reader": "^0.2.0"
  },
  "devDependencies": {
