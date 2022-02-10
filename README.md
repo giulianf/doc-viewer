@@ -67,9 +67,9 @@
 ### Core
 
 ```bash
- npm i react-doc-viewer
+ npm i @r-uis/doc-viewer
  # or
- yarn add react-doc-viewer
+ yarn add @r-uis/doc-viewer
 ```
 
 ## Usage
@@ -85,7 +85,7 @@ DocViewer requires at least an array of document objects to function.
 Each document object must have a uri to a file, either a url that returns a file or a local file.
 
 ```tsx
-import DocViewer from "react-doc-viewer";
+import DocViewer from "@r-uis/doc-viewer";
 
 function App() {
   const docs = [
@@ -103,7 +103,7 @@ To use the included renderers.
 `DocViewerRenderers` is an Array of all the included renderers.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@r-uis/doc-viewer";
 
 <DocViewer
   pluginRenderers={DocViewerRenderers}
@@ -114,7 +114,7 @@ import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
 Or you can import individual renderers.
 
 ```tsx
-import DocViewer, { PDFRenderer, PNGRenderer } from "react-doc-viewer";
+import DocViewer, { PDFRenderer, PNGRenderer } from "@r-uis/doc-viewer";
 
 <DocViewer
   pluginRenderers={[PDFRenderer, PNGRenderer]}
@@ -131,7 +131,7 @@ To create a custom renderer, that will just exist for your project.
 
 ```tsx
 import React from "react";
-import DocViewer from "react-doc-viewer";
+import DocViewer from "@r-uis/doc-viewer";
 
 const MyCustomPNGRenderer: DocRenderer = ({
   mainState: { currentDocument },
@@ -152,7 +152,7 @@ MyCustomPNGRenderer.weight = 1;
 And supply it to DocViewer > pluginRenderers inside an `Array`.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@r-uis/doc-viewer";
 
 <DocViewer
   pluginRenderers={[MyCustomPNGRenderer]}
@@ -169,7 +169,7 @@ import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
 
 ### Custom File Loader
 
-If you need to prevent the actual loading of the file by `react-doc-viewer`.
+If you need to prevent the actual loading of the file by `@r-uis/doc-viewer`.
 you can decorate your custom renderer with a callback to do as you wish. e.g. Load the file yourself in an iFrame.
 
 ```tsx
