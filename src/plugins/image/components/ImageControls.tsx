@@ -24,11 +24,11 @@ const ImageControls: FC<{}> = () => {
 	const fileName = getFileName(mainState?.config, mainState?.currentDocument);
 
   return (
-    <Container id="pdf-controls">
+    <Container id="image-controls">
 
       {currentDocument?.fileData && (
         <DownloadButton
-          id="pdf-download"
+          id="image-download"
           href={currentDocument?.fileData as string}
           download={fileName}
         >
@@ -37,21 +37,21 @@ const ImageControls: FC<{}> = () => {
       )}
 
       <ControlButton
-        id="pdf-zoom-out"
+        id="image-zoom-out"
         onMouseDown={() => dispatch(setZoomLevel(zoomLevel - 0.1))}
       >
         <ZoomOutImageIcon color="#000" size="80%" />
       </ControlButton>
 
       <ControlButton
-        id="pdf-zoom-in"
+        id="image-zoom-in"
         onMouseDown={() => dispatch(setZoomLevel(zoomLevel + 0.1))}
       >
         <ZoomInImageIcon color="#000" size="80%" />
       </ControlButton>
 
       <ControlButton
-        id="pdf-zoom-reset"
+        id="image-zoom-reset"
         onMouseDown={() => dispatch(setZoomLevel(initialImageState.zoomLevel))}
         disabled={zoomLevel === initialImageState.zoomLevel}
       >
@@ -72,6 +72,7 @@ const Container = styled.div`
   z-index: 1;
   justify-content: flex-end;
   padding: 8px;
+	width: 100%;
   background-color: ${(props: IStyledProps) => props.theme.tertiary};
   box-shadow: 0px 2px 3px #00000033;
 
