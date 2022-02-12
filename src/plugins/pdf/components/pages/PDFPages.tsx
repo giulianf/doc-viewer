@@ -7,6 +7,11 @@ import { initialPDFState } from "../../state/reducer";
 import { PDFAllPages } from "./PDFAllPages";
 import PDFSinglePage from "./PDFSinglePage";
 
+const options = {
+  cMapUrl: 'cmaps/',
+  cMapPacked: true,
+};
+
 const PDFPages: FC<{}> = () => {
   const {
     state: { mainState, paginated },
@@ -26,6 +31,7 @@ const PDFPages: FC<{}> = () => {
       file={currentDocument.fileData}
       onLoadSuccess={({ numPages }) => dispatch(setNumPages(numPages))}
       loading={<span>Loading...</span>}
+			options={options}
     >
       {paginated ? <PDFSinglePage /> : <PDFAllPages />}
     </DocumentPDF>
