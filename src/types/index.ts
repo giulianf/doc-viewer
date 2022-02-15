@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, CSSProperties } from "react";
 import { ThemedStyledProps } from "styled-components";
 import { IMainState } from "../state/reducer";
 import { FileLoaderFunction } from "../utils/fileLoaders";
@@ -38,6 +38,15 @@ export interface IDocument {
   fileType?: string;
   fileData?: string | ArrayBuffer;
 	fileName?: string;
+}
+
+export interface DocViewerProps {
+  documents: IDocument[];
+  className?: string;
+  style?: CSSProperties;
+  config?: IConfig;
+  theme?: ITheme;
+  pluginRenderers?: DocRenderer[];
 }
 
 export interface DocRendererProps {

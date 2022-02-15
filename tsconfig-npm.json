@@ -23,6 +23,8 @@
     "src/_example-files_",
     "src/serviceWorker.ts",
     "src/setupTests.ts",
+    "src/App.tsx",
+    "src/DocViewer.tsx",
     "src/index.tsx"
   ]
 }

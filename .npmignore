@@ -1,10 +1,17 @@
 /.git
 /.vscode
+/dist
 /demo
 /public
+/scripts
 /src
+/node_modules
 CHANGELOG.md
 README.md
 tsconfig-npm.json
 tsconfig.json
 yarn-error.log
+
+# lock files
+package-lock.json
+yarn.lock
