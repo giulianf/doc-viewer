@@ -24,7 +24,7 @@
     "src/serviceWorker.ts",
     "src/setupTests.ts",
     "src/App.tsx",
-    "src/DocViewer.tsx",
+    // "src/DocViewer.tsx",
     "src/index.tsx"
   ]
 }
