@@ -407,12 +407,13 @@ const myHeader: IHeaderOverride = (state, previousDocument, nextDocument) => {
 
 ### `IHeaderConfig`
 
-| name               | type                                  |
-| ------------------ | ------------------------------------- |
-| disableHeader?     | `boolean`                             |
-| disableFileName?   | `boolean`                             |
-| retainURLParams?   | `boolean`                             |
-| overrideComponent? | [`IHeaderOverride`](#iheaderoverride) |
+| name               		| type                                  |
+| --------------------- | ------------------------------------- |
+| disableHeader?     		| `boolean`                             |
+| disableFileName?   		| `boolean`                             |
+| disableDocumentNav?   | `boolean`                          		|
+| retainURLParams?   		| `boolean`                             |
+| overrideComponent? 		| [`IHeaderOverride`](#iheaderoverride) |
 
 ---
 

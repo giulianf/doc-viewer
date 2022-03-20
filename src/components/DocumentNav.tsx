@@ -8,11 +8,13 @@ import { NextDocIcon, PrevDocIcon } from "./icons";
 
 export const DocumentNav: FC<{}> = () => {
   const {
-    state: { currentDocument, currentFileNo, documents },
+    state: { config, currentDocument, currentFileNo, documents },
     dispatch,
   } = useContext(DocViewerContext);
 
   if (documents.length <= 1 || !currentDocument) return null;
+
+  if (config?.header?.disableDocumentNav) return null;
 
   let fileName = currentDocument.uri;
 
