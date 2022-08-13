@@ -12,8 +12,12 @@ const PdfView = () => {
 			pluginRenderers={DocViewerRenderers}
 			config={{header: {
 				// disableFileName: true,
-				// disableDocumentNav: true
+				// disableDocumentNav: true,
+				// paginated: true,
 			}}}
+			theme={{
+				tertiary: '#fff',
+			}}
     />
 		</div>
   );

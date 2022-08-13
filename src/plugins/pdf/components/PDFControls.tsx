@@ -1,4 +1,4 @@
-import React, { FC, useContext } from "react";
+import React, { FC, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Button, LinkButton } from "../../../components/common";
 import { IStyledProps } from "../../../types";
@@ -24,6 +24,13 @@ const PDFControls: FC<{}> = () => {
   const currentDocument = mainState?.currentDocument || null;
 
 	const fileName = getFileName(mainState?.config, mainState?.currentDocument);
+
+	useEffect(() => {
+		// console.log('mainState?.config :: ', mainState?.config)
+		if (mainState?.config?.header?.paginated) {
+			dispatch(setPDFPaginated(mainState?.config?.header?.paginated))
+		}
+	}, [mainState?.config])
 
   return (
     <Container id="pdf-controls">

@@ -1,7 +1,7 @@
 // @ts-ignore
 import * as pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry"
 import { pdfjs } from 'react-pdf'
-import { useNavigate, useParams, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, useParams, useLocation } from 'react-router-dom'
 import {
 	PdfView,
 	MultipleDocs,
@@ -10,14 +10,15 @@ import {
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 const App = () => {
-	const navigate = useNavigate()
 
 	return (
-		<div style={{height: '99vh'}}>
+		<Router>
 			<div style={{height: '99vh'}}>
-				<PdfView />
+				<div style={{height: '99vh'}}>
+					<PdfView />
+				</div>
 			</div>
-		</div>
+		</Router>
   );
 }
 
