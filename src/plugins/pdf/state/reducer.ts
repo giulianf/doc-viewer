@@ -4,16 +4,19 @@ import {
   SetCurrentPage,
   SetNumPages,
   SetPDFPaginated,
+	SetPDFDownloadable,
   SetZoomLevel,
   SET_CURRENT_PAGE,
   SET_NUM_PAGES,
   SET_PDF_PAGINATED,
+	SET_PDF_DOWNLOADABLE,
   SET_ZOOM_LEVEL,
 } from "./actions";
 
 export type IPDFState = {
   zoomLevel: number;
   paginated: boolean;
+  downloadable: boolean;
   numPages: number;
   currentPage: number;
   mainState?: IMainState;
@@ -22,6 +25,7 @@ export type IPDFState = {
 export const initialPDFState: IPDFState = {
   zoomLevel: 1,
   paginated: false,
+  downloadable: true,
   numPages: 0,
   currentPage: 1,
 };
@@ -45,6 +49,11 @@ export const reducer: PDFStateReducer = (
     case SET_PDF_PAGINATED: {
       const { value } = action as SetPDFPaginated;
       return { ...state, paginated: value };
+    }
+
+    case SET_PDF_DOWNLOADABLE: {
+      const { value } = action as SetPDFDownloadable;
+      return { ...state, downloadable: value };
     }
 
     case SET_NUM_PAGES: {

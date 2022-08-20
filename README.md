@@ -413,6 +413,7 @@ const myHeader: IHeaderOverride = (state, previousDocument, nextDocument) => {
 | disableFileName?   		| `boolean`                             |
 | disableDocumentNav?   | `boolean`                          		|
 | paginated?            | `boolean`                          		|
+| downloadable?         | `boolean`                          		|
 | retainURLParams?   		| `boolean`                             |
 | overrideComponent? 		| [`IHeaderOverride`](#iheaderoverride) |
 

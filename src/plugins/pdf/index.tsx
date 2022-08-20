@@ -30,8 +30,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow-y: hidden;
-  // overflow-y: auto;
+  // overflow-y: hidden;
+  overflow-y: auto;
 
   /* width */
   &::-webkit-scrollbar {

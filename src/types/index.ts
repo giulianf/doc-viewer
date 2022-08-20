@@ -11,6 +11,7 @@ export interface IHeaderConfig {
   disableFileName?: boolean;
   disableDocumentNav?: boolean;
   paginated?: boolean;
+  downloadable?: boolean;
   retainURLParams?: boolean;
   overrideComponent?: IHeaderOverride;
 }

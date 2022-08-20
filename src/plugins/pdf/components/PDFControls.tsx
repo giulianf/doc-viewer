@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button, LinkButton } from "../../../components/common";
 import { IStyledProps } from "../../../types";
 import { PDFContext } from "../state";
-import { setPDFPaginated, setZoomLevel } from "../state/actions";
+import { setPDFPaginated, setPDFDownloadable, setZoomLevel } from "../state/actions";
 import { initialPDFState } from "../state/reducer";
 import {
   DownloadPDFIcon,
@@ -17,7 +17,7 @@ import { getFileName } from '../../../utils/getFileName';
 
 const PDFControls: FC<{}> = () => {
   const {
-    state: { mainState, paginated, zoomLevel, numPages },
+    state: { mainState, paginated, downloadable, zoomLevel, numPages },
     dispatch,
   } = useContext(PDFContext);
 
@@ -30,13 +30,16 @@ const PDFControls: FC<{}> = () => {
 		if (mainState?.config?.header?.paginated) {
 			dispatch(setPDFPaginated(mainState?.config?.header?.paginated))
 		}
+		if (mainState?.config?.header?.downloadable === false) {
+			dispatch(setPDFDownloadable(mainState?.config?.header?.downloadable))
+		}
 	}, [mainState?.config])
 
   return (
     <Container id="pdf-controls">
       {paginated && numPages > 1 && <PDFPagination />}
 
-      {currentDocument?.fileData && (
+      {downloadable && currentDocument?.fileData && (
         <DownloadButton
           id="pdf-download"
           href={currentDocument?.fileData as string}

@@ -14,6 +14,7 @@ const PdfView = () => {
 				// disableFileName: true,
 				// disableDocumentNav: true,
 				// paginated: true,
+				// downloadable: false,
 			}}}
 			theme={{
 				tertiary: '#fff',

@@ -20,6 +20,17 @@ export const setPDFPaginated = (value: boolean): SetPDFPaginated => ({
   value,
 });
 
+// SET_DOWNLOADABLE
+export const SET_PDF_DOWNLOADABLE: string = "SET_PDF_DOWNLOADABLE";
+export interface SetPDFDownloadable {
+  type: typeof SET_PDF_DOWNLOADABLE;
+  value: boolean;
+}
+export const setPDFDownloadable = (value: boolean): SetPDFDownloadable => ({
+  type: SET_PDF_DOWNLOADABLE,
+  value,
+});
+
 // SET_NUM_PAGES
 export const SET_NUM_PAGES: string = "SET_NUM_PAGES";
 export interface SetNumPages {
