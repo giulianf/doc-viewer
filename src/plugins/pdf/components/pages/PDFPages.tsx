@@ -24,11 +24,13 @@ const PDFPages: FC<{}> = () => {
     dispatch(setNumPages(initialPDFState.numPages));
   }, [currentDocument]);
 
-  if (!currentDocument || currentDocument.fileData === undefined) return null;
+	if (!currentDocument) return null;
+	// if (!currentDocument || currentDocument.fileData === undefined) return null;
 
   return (
     <DocumentPDF
-      file={currentDocument.fileData}
+      // file={currentDocument.uri}
+			file={currentDocument.fileData}
       onLoadSuccess={({ numPages }) => dispatch(setNumPages(numPages))}
       loading={<span>Loading...</span>}
 			options={options}
