@@ -21,14 +21,15 @@
   "version:pre": "if [ $(git rev-parse --abbrev-ref HEAD) != 'master' ]; then echo \"\\033[1m\\033[31mCurrently on $(git rev-parse --abbrev-ref HEAD) branch. Please checkout master.\\033[0m\"; exit 1; else exit 0; fi",
   "version:changelog": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
   "version:post": "git push origin master && git push origin master --tags",
-  "build-release:patch": "react-scripts test --watchAll=false && npm run built && npm run version:patch",
+  "build-release:patch": "npm run built && npm run version:patch",
+  "build-release:patch1": "react-scripts test --watchAll=false && npm run built && npm run version:patch",
   "build-release:minor": "react-scripts test --watchAll=false && npm run built && npm run version:minor",
   "build-release:major": "react-scripts test --watchAll=false && npm run built && npm run version:major",
   "npm-publish": "npm publish --access=public"
  },
  "dependencies": {
   "react-pdf": "5.7.2",
-  "styled-components": "^5.3.5",
+  "styled-components": "^5.3.6",
   "wl-msg-reader": "^0.2.0"
  },
  "devDependencies": {
