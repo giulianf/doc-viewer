@@ -18,8 +18,8 @@ export const DocumentNav: FC<{}> = () => {
 
   let fileName = currentDocument.uri;
 
-  const splitURL = fileName.split("/");
-  if (splitURL.length) {
+  const splitURL = fileName?.split("/");
+  if (splitURL?.length) {
     fileName = splitURL[splitURL.length - 1];
   }
 

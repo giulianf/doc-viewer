@@ -7,6 +7,8 @@ import { DocRenderer, IStyledProps } from "../../types";
 import PDFPages from "./components/pages/PDFPages";
 import PDFControls from "./components/PDFControls";
 import { PDFProvider } from "./state";
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 // pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 

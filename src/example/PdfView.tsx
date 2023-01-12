@@ -5,8 +5,8 @@ const PdfView = () => {
 		<div style={{height: '99vh'}}>
     <DocViewer
 			documents={[
-				{ uri: require("../_example-files_/pdf.pdf").default, fileName: 'ABC' }, // Local File
-				{ uri: require("../_example-files_/sample.pdf").default }, // Local File
+				{ uri: require("../_example-files_/pdf.pdf"), fileName: 'ABC' }, // Local File
+				{ uri: require("../_example-files_/sample.pdf") }, // Local File
 
 			]}
 			pluginRenderers={DocViewerRenderers}
