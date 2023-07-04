@@ -28,9 +28,9 @@
   "npm-publish": "npm publish --access=public"
  },
  "dependencies": {
-  "react-pdf": "6.2.2",
-  "styled-components": "^5.3.6",
-  "wl-msg-reader": "^0.2.0"
+  "react-pdf": "7.1.2",
+  "styled-components": "^5.3.11",
+  "wl-msg-reader": "^0.2.1"
  },
  "devDependencies": {
   "@testing-library/jest-dom": "^5.16.5",
@@ -40,7 +40,7 @@
   "@types/node": "^17.0.45",
   "@types/react": "^17.0.52",
   "@types/react-dom": "^17.0.18",
-  "@types/react-pdf": "6.2.0",
+  "@types/react-pdf": "7.0.0",
   "@types/styled-components": "^5.1.26",
   "generate-changelog": "^1.8.0",
   "react": "^17.0.2",
