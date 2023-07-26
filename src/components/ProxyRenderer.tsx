@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { setRendererRect } from "../state/actions";
 import { IStyledProps } from "../types";
@@ -10,6 +10,12 @@ import { LoadingIcon } from "./icons";
 export const ProxyRenderer: FC<{}> = () => {
   const { state, dispatch, CurrentRenderer } = useDocumentLoader();
   const { documents, documentLoading, currentDocument } = state;
+
+  useEffect(() => {
+    if (currentDocument?.status === 403) {
+      state.onLoadError('')
+    }
+  }, [currentDocument])
 
   const size = useWindowSize();
 

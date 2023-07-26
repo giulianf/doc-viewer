@@ -34,6 +34,7 @@ const PDFPages: FC<{}> = () => {
       onLoadSuccess={({ numPages }) => dispatch(setNumPages(numPages))}
       loading={<span>Loading...</span>}
 			options={options}
+      onLoadError={mainState?.onLoadError}
     >
       {paginated ? <PDFSinglePage /> : <PDFAllPages />}
     </DocumentPDF>

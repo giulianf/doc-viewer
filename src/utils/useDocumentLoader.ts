@@ -46,6 +46,7 @@ export const useDocumentLoader = (): {
           updateCurrentDocument({
             ...currentDocument,
             fileType: contentType || undefined,
+            status: response.status,
           })
         );
       });

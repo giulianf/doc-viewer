@@ -24,6 +24,7 @@ export type IMainState = {
   config?: IConfig;
   pluginRenderers?: DocRenderer[];
   prefetchMethod?: string;
+  onLoadError: (err: any) => void;
 };
 
 export const initialState: IMainState = {
@@ -35,6 +36,7 @@ export const initialState: IMainState = {
   config: {},
   pluginRenderers: [],
   prefetchMethod: 'HEAD',
+  onLoadError: (err: any) => {},
 };
 
 export type MainStateReducer = (

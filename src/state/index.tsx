@@ -21,7 +21,7 @@ const DocViewerContext = createContext<{
 }>({ state: initialState, dispatch: () => null });
 
 const AppProvider: FC<DocViewerProps> = (props) => {
-	const { children, documents, config, pluginRenderers } = props;
+	const { children, documents, config, pluginRenderers, onLoadError } = props;
 	const [documentsState, setDocumentsState] = useState<any>([])
 	const [newDocs, setNewDocs] = useState<IMainState | any>({
 		...initialState,
@@ -29,6 +29,7 @@ const AppProvider: FC<DocViewerProps> = (props) => {
 		currentDocument: documents && documents.length ? documents[0] : undefined,
 		config,
 		pluginRenderers,
+		onLoadError,
 	})
 	// console.log('newDocs :: ', newDocs)
 	const [fullState, setFullState] = useState<IMainState | any>({ ...newDocs })

@@ -41,6 +41,7 @@ export interface IDocument {
   fileType?: string;
   fileData?: string | ArrayBuffer;
 	fileName?: string;
+  status?: number;
 }
 
 export interface DocViewerProps {
@@ -51,6 +52,7 @@ export interface DocViewerProps {
   theme?: ITheme;
   pluginRenderers?: DocRenderer[];
   prefetchMethod?: string;
+  onLoadError?: (err: any) => void;
 }
 
 export interface DocRendererProps {
