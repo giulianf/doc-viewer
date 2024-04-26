@@ -1,6 +1,6 @@
 {
  "name": "@r-uis/doc-viewer",
- "version": "0.1.18",
+ "version": "0.1.19",
  "description": "Document viewer for react. Renders online/local documents.",
  "author": "Matthew Mogford",
  "license": "ISC",
@@ -48,9 +48,9 @@
   "react-router-dom": "^6.4.5",
   "react-scripts": "5.0.1",
   "typescript": "^5.0.2"
-},
+ },
  "overrides": {
-     "typescript": "^5.0.2"
+  "typescript": "^5.0.2"
  },
  "eslintConfig": {
   "extends": "react-app"
