@@ -8,6 +8,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    },
     "declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
