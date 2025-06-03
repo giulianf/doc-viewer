@@ -33,7 +33,8 @@ const PDFControls: FC<{}> = () => {
 		if (mainState?.config?.header?.downloadable === false) {
 			dispatch(setPDFDownloadable(mainState?.config?.header?.downloadable))
 		}
-	}, [mainState?.config])
+	}, [])
+// }, [mainState?.config])
 
   return (
     <Container id="pdf-controls">
