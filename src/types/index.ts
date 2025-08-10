@@ -39,7 +39,7 @@ export interface IStyledProps extends ThemedStyledProps<any, any> {
 export interface IDocument {
   uri: string;
   fileType?: string;
-  fileData?: string | ArrayBuffer;
+  fileData?: string | ArrayBuffer | Blob;
 	fileName?: string;
   status?: number;
 }
